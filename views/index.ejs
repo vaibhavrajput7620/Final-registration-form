@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <title></title>
+   <link rel="stylesheet" href="/stylesheets/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+   <div class="container">
+      <header>Signup Form</header>
+      <div class="progress-bar">
+         <div class="step">
+            <p>
+
+            </p>
+            <div class="bullet">
+               <span>1</span>
+            </div>
+            <div class="check fas fa-check"></div>
+         </div>
+         <div class="step">
+            <p>
+
+            </p>
+            <div class="bullet">
+               <span>2</span>
+            </div>
+            <div class="check fas fa-check"></div>
+         </div>
+         <div class="step">
+            <p>
+
+            </p>
+            <div class="bullet">
+               <span>3</span>
+            </div>
+            <div class="check fas fa-check"></div>
+         </div>
+         <div class="step">
+            <p>
+
+            </p>
+            <div class="bullet">
+               <span>4</span>
+            </div>
+            <div class="check fas fa-check"></div>
+         </div>
+
+      </div>
+      <div class="form-outer">
+         <form action="/register" method="post" id="form" >
+            <div class="page slide-page">
+               <!-- <div class="title">  
+                     Basic Info:
+                  </div> -->
+               <div class="field">
+                  <div class="label">
+                     First Name
+                  </div>
+                  <input type="text" name="firstname" id="firstname" onblur="validate()" class="capitalize errorb" onblur="capitalizeFirstLetter('firstName')" required pattern="[A-Za-z]+">
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+               
+               <div class="field">
+                  <div class="label">
+                     Last Name
+                  </div>
+                  <input type="text" name="lastname" id="lastname" onblur="validatelastname()" class="capitalize errorb" onblur="capitalizeFirstLetter('lastname')" onkeydown="validate()" required pattern="[A-Za-z]+">
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+               <div class="field">
+                  <div class="label">
+                     Address
+                  </div>
+                  <input type="text" id="address" name="address" onblur="validateadress()" class="capitalize errorb" onblur="capitalizeFirstLetter('address')" onkeydown="validate()" required pattern="[A-Za-z]+">
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+               <div class="field">
+                  <div class="label">
+                     Pin Code
+                  </div>
+                  <input type="number" name="pincode"  class="errorb" onblur="validatepincode()" id="pincode" maxlength="6" required >
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+               <div class="field">
+                  <div class="label">
+                     Gender
+                  </div>
+                  <label>
+                     <input style="height: 25px;"  type="radio" name="gender" value="male" id="male" required>
+                     Male
+                  </label>
+
+                  <label>
+                     <input style="height: 25px;" type="radio" name="gender" value="female" id="female" required>
+                     Female
+                  </label>
+
+                  <label>
+                     <input style="height: 25px;" type="radio" name="gender" value="other" id="other" required>
+                     Other
+                  </label>
+
+               </div>
+               <!-- <div class="field"
+                  <button  class="firstNext next">Next</button>
+               </div> -->
+            </div>
+           
+            <div class="page">
+               <!-- <div class="title">
+                      Contact Info:
+                   </div> -->
+               <div class="field">
+                  <div class="label">
+                     Email
+                  </div>
+                  <input type="email" name="email" class="errorb" onblur="validateemail()" id="emailid" required>
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+               <div class="field">
+                  <div class="label">
+                     Phone
+                  </div>
+                  <input type="number" name="phonenumber" onblur="validatephone()" class="errorb" id="phoneno" required>
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+               <div class="field">
+                  <div class="label">
+                     Country           
+                  </div>
+                  <input type="text" name="country" onblur="validatecountry()" class="capitalize errorb" id="Country" required>
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+
+               <div class="field">
+                  <div class="label">
+                     Bio
+                  </div>
+                  <textarea id="bio" name="bio"   class="errorb" placeholder="Write a short bio..."></textarea>
+                 
+               </div>
+               <div class="field btns">
+                  <!-- <button class="prev-1 prev">Previous</button> -->
+                  <!-- <button class="next-1 next">Next</button> -->
+               </div>
+            </div>
+            <div class="d-flex">
+
+               <div class="pag">
+                  <!-- <div class="title">
+                        Date of Birth:
+                     </div> -->
+                     <div class="field">
+                        <div class="label">
+                           Date Of Birth
+                        </div>
+                        <input type="date"  id="dob" onblur="validatedob()" name="dob" max="2004-01-01" required>
+                      
+                       <small>error msg</small>
+                     </div>
+                  <a id="addSocialHandlesBtn" href="#" onclick="showSocialHandles()">Add Social Handles</a>
+
+                  <div id="socialHandles" class="hidden">
+                     <label class="lbl" for="instagram">Instagram</label>
+                     <input class="inputtype" type="text" id="instagram" name="instagram"
+                        placeholder="Enter your Instagram ID"><br>
+
+                     <label class="lbl" for="facebook">Facebook</label>
+                     <input class="inputtype" type="text" id="facebook" name="facebook"
+                        placeholder="Enter your Facebook ID"><br>
+
+                     <label class="lbl" for="linkedin">LinkedIn</label>
+                     <input class="inputtype" type="text" id="linkedin" name="linkedin"
+                        placeholder="Enter your LinkedIn ID"><br>
+
+                     <label class="lbl" for="twitter">Twitter</label>
+                     <input class="inputtype" type="text" id="twitter" name="twitter"
+                        placeholder="Enter your Twitter ID"><br>
+
+                     <label class="lbl" for="skype">Skype</label>
+                     <input class="inputtype" type="text" id="skype" name="skype" placeholder="Enter your Skype ID">
+                  </div>
+               </div>
+               <!-- <div class="btnl navigation-container">
+                  <div class="checkbox-container">
+
+                     <input type="checkbox" id="acceptTAndC" name="acceptTAndC">
+                     <label for="acceptTAndC">I have read and accept the Terms and Conditions</label>
+                  </div>
+                  <h6 id="alert"></h6>
+                  <div class="navigation-btn">
+                     <!-- <button id="lbtn" class="prev-2 prev cursor-pointer">Previous</button> -->
+                     <!-- <input type="submit" id="llbtn"  class="next-2 next" value="submit"> -->
+                  <!-- </div>
+                  <a class="anchore" href="/signin">Already a member? Sign In</a>
+               </div> --> -->
+            </div>
+            <div class="page slide-page">
+               <!-- <div class="title">
+                     Basic Info:
+                  </div> -->
+               <div class="field">
+                  <div class="label">
+                   Create Username
+                  </div>
+                  <input type="text" name="username" class="errorb" onblur="validateusername(this)" id="username" required >
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+               <div class="field">
+                  <div class="label">
+                   Create Password
+                  </div>
+                  <input type="password" name="password" class="errorb" onblur="validatepassword(this)" id="password" required>
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+               <div class="field">
+                  <div class="label">
+                    Comfirm Password
+                  </div>
+                  <input type="password" name="cpassword" class="errorb" onblur="validateCpassword(this)" id="compassword" required >
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+               <div class="fiel">
+                  <div class="label" id="captcha-div">
+                      <span id="captcha" class="captcha"></span> 
+                  </div>
+                  <i style="cursor: pointer; font-size:24px" class="fa" onclick="refreshCaptcha()"> &#xf021;</i>
+                  
+               </div>
+                 <div class="field">
+                    <div class="label">
+                   Captcha
+                  </div>
+                   
+                    <input type="text" class="errorb" id="captchaInput" onblur="validatecaptcha(this)" name="captchaInput" required>
+                    <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+                 </div>
+                 <div id="usererror"></div>
+                 <a class="anchore" href="/signin">Already a member? Sign In</a>
+               <!-- <div class="field">
+                  <button type="submit" class="sub" onclick="uesersubmit()">submit</button>
+               </div> -->
+              
+            </div>
+             
+            <input type="submit" id="llbtn"  class="next-2 next" value="submit">
+             
+            </form>
+         </div>
+         <!-- <button class="prevv">prev</button>
+            <button  class="nextt"  onclick="submitform()" >Next</button> -->
+            <div class="field btns">
+               <button class="prevv">prev</button>
+               <button type="submit"  class="nextt" onclick=" submitform()" >Next</button>
+            </div>
+      
+         </div>
+   <script src="/javascripts/script.js"></script>
+</body>
+
+</html>

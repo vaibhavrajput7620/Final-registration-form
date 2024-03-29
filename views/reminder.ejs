@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder App</title>
+    <link rel="stylesheet" href="/stylesheets/reminder.css">
+</head>
+<body>
+    <div class="container">
+   <h2 style="text-align: center;">Reminder App</h2>
+   <label for="">Title :</label>
+   <input type="text" id="title" placeholder="Enter Title">
+   <label for="">Discription :</label>
+   <input type="text" id="discription" placeholder="Enter Discription">
+   <label for="">Date :</label>
+   <input type="date" id="date" placeholder="Enter Date">
+   <label for="">Time :</label>
+   <input type="time" id="time" placeholder="Enter time">
+    <div class="btn">
+   <button class="button" onclick="scheduleReminder()">Add Reminder</button>
+</div>
+    
+
+</div>
+ 
+<audio src="/images/jai_shree_ram.mp3" id="notificationSound"></audio>
+
+
+<script src="/javascripts/reminder.js"></script>
+
+
+ 
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <title></title>
+   <link rel="stylesheet" href="/stylesheets/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+   <div class="container">
+      <header>signin form</header>
+      
+      <div class="form-outer">
+         <form action="/login" method="post" id="loginForm">
+            <div class="page slide-page">
+               <!-- <div class="title">
+                     Basic Info:
+                  </div> -->
+               <div class="field">
+                  <div class="label">
+                    Username
+                  </div>
+                  <input type="text"   class="errorb" onblur="validateusername(this)" id="username" name="username" required>
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+               <div class="field">
+                  <div class="label">
+                    Password
+                  </div>
+                  <input type="password"  class="errorb" onblur="validatepassword(this)" id="password" name="password" required>
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+               <a class="anchore" id="forgotanchor" href="/forgot">forgot password</a><br>
+               <div class="fiel">
+                <div class="label" id="captcha-div">
+                    <span id="captcha" class="captcha"></span> 
+                </div>
+                <i style="cursor: pointer; font-size:24px" class="fa" onclick="refreshCaptcha()"> &#xf021;</i>
+                
+             </div>
+               <div class="field">
+                  <div class="label">
+                 Captcha
+                </div>
+                 
+                  <input type="text" class="errorb" onblur="validatecaptcha(this)" id="captchaInput" name="captchaInput" required>
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+             
+               <div id="error"></div>
+               
+               <div class="field">
+                  <input type="submit"  class="Login" value="login">
+               </div>
+               
+               <a class="anchore" id="forgotanchor" href="/">Register here</a>
+            </div>
+        </form>
+
+
+    </div>
+
+
+ </div>
+ <script src="/javascripts/script.js"></script>
+</body>
+
+</html>

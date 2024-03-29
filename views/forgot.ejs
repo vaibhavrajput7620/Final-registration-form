@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <title></title>
+   <link rel="stylesheet" href="/stylesheets/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+   <div class="container">
+      <header>Forgot Password Form</header>
+   
+      <div class="form-outer">
+         <form action="/forgot" method="post" id="forgotPasswordForm">
+            <div class="page slide-page">
+               <!-- <div class="title">
+                     Basic Info:
+                  </div> -->
+               <div class="field">
+                  <div class="label">
+                     Email
+                  </div>
+                  <input type="email" class="errorb" onblur=" validateemailval(this)" id="email" name="email" >
+                  <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+               </div>
+               <div class="field">
+                  <div class="label">
+                     Date Of Birth
+                  </div>
+                  <input type="date" id="dob" name="dob" max="2004-01-01">
+               </div>
+               <!-- <div class="field">
+                  <div class="label">
+                     Address
+                  </div>
+                  <input type="text" id="address"class="capitalize" onblur="capitalizeFirstLetter('address')" required pattern="[A-Za-z]+">
+               </div>
+               <div class="field">
+                  <div class="label">
+                     Pin Code
+                  </div>
+                  <input type="text"  id="pincode" maxlength="6" >
+               </div>
+               <div class="field">
+                  <div class="label">
+                     Gender
+                  </div>
+                  <label>
+                     <input style="height: 25px;" type="radio" name="gender" value="male" id="male">
+                     Male
+                  </label>
+
+                  <label>
+                     <input style="height: 25px;" type="radio" name="gender" value="female" id="female">
+                     Female
+                  </label>
+
+                  <label>
+                     <input style="height: 25px;" type="radio" name="gender" value="other" id="other">
+                     Other
+                  </label>
+
+               </div> -->
+         <div id="error1"></div>
+               <div class="field">
+                <input type="submit"  class="Login" value="submit">
+               </div>
+            </div>
+        </form>
+        <!-- <div id="resetPasswordForm" style="display: none;">
+         <h2>Reset Password</h2>
+         <form id="resetPasswordForm">
+            <div class="page slide-page">
+            <div class="field">
+               <div class="label">
+                  New password
+               </div>
+               <input type="password"  class="errorb" onblur="validatepassword(this)" id="newPassword" >
+               <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+            </div>
+ 
+            <div class="field">
+               <div class="label">
+                  Confirm password
+               </div>
+               <input type="password"  class="errorb" onblur="validateforgetCpassword(this)" id="compassword" >
+               <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+            </div>
+            <input type="hidden" id="userIndex" value="">
+
+            <div class="fiel">
+               <div class="label" id="captcha-div">
+                   <span id="captcha" class="captcha"></span> 
+               </div>
+               <i style="cursor: pointer; font-size:24px" class="fa" onclick="refreshCaptcha()"> &#xf021;</i>
+               
+            </div>
+              <div class="field">
+                 <div class="label">
+                Captcha
+               </div>
+                
+                 <input type="text" id="captchaInput"  class="errorb" onblur="validatecaptcha(this)" name="captchaInput" required>
+                 <i class="fa fa-check-circle" id="ib" aria-hidden="true"></i>
+                  <i class="fa fa-exclamation-circle" id="ib" aria-hidden="true"></i> <br>
+                  <small>error msg</small>
+                
+              </div>
+              <div id="errormessage"></div>
+            <div class="field">
+             <button type="button" onclick="submitResetPassword()">Submit</button>
+             </div>
+             </div>
+         </form>
+     </div> -->
+
+
+    </div>
+
+
+ </div>
+ <script src="/javascripts/script.js"></script>
+</body>
+
+</html>

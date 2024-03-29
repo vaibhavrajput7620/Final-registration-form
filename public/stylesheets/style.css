@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background:  -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+}
+::selection{
+  color: #fff;
+  background: #d43f8d;
+}
+.container{
+  width: 330px;
+  height: 711px;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px 35px 10px 35px;
+  margin-top: 10px;
+ 
+}
+.container header{
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 0px 0;
+}
+.container .form-outer{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 74vh;
+}
+.container .form-outer form{
+  display: flex;
+  width: 400%;
+}
+.form-outer form .page{
+  width: 25%;
+  height: 413px;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .pag{
+  /* width: 25%; */
+  height: 380px;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .page .title{
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+.form-outer form .page .field{
+  width: 330px;
+  height: 45px;
+  margin: 31px 0;
+  display: flex;
+  position: relative;
+  margin-bottom: 47px;
+}
+form .page .field .label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+form .page .field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 15px;
+}
+form .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+form .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;  
+  border-radius: 5px;
+  background: #d33f8d;
+  margin-top: -44px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field .Login {
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;  
+  border-radius: 5px;
+  background: #d33f8d;
+  margin-top: -44px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field button:hover{
+  background: #000;
+}
+form .page .btns button{
+  margin-top: 83px!important;
+}
+form .page .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
+}
+form .page .btns button.next{
+  margin-left: 3px;
+}
+.container .progress-bar{
+  display: flex;
+  margin: 15px 0;
+  user-select: none;
+}
+.container .progress-bar .step{
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.container .progress-bar .step p{
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.progress-bar .step .bullet{
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.progress-bar .step .bullet.active{
+  border-color: #d43f8d;
+  background: #d43f8d;
+}
+.progress-bar .step .bullet span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar .step .bullet.active span{
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+  position: absolute;
+    content: '';
+    bottom: 11px;
+    right: -57px;
+    height: 3px;
+    width: 57px;
+  background: #262626;
+}
+.progress-bar .step .bullet.active:after{
+  background: #d43f8d;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+  display: none;
+}
+.progress-bar .step p.active{
+  color: #d43f8d;
+  transition: 0.2s linear;
+}
+.progress-bar .step .check{
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active{
+  display: block;
+  color: #fff;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical; /* Allow vertical resizing of the textarea */
+  }
+  .date{
+   margin-right: 100px;
+   margin-bottom: 10px;
+  }
+  .hidden {
+    display: none;
+    /* margin: 10px; */
+    
+  }
+  #addSocialHandlesBtn {
+  
+  cursor: pointer;
+  
+  }
+  
+
+  .lbl{
+   
+  margin-right: 20px;
+
+  }
+  .inputtype{
+    margin: 5px;
+    margin-right: 20px;
+  }
+  .btnl{
+    margin-top: 1rem;
+    /* margin-top: 300px;
+    position:static; */
+    /* margin-left: 50px;
+    position: static; */
+    
+    
+  }
+  #lbtn{
+   height:40px;
+   width: 100px;
+   background-color:#3d4343 ;
+   color: white;
+   border-radius: 20px;
+   border: none;
+
+  }
+  #llbtn{
+    position: fixed;
+    top: 697px;
+    right: 697px;
+    height:40px;
+    width: 100px;
+    background-color: #0000ff ;
+    color: white;
+    border-radius: 20px;
+    border: none;
+ 
+   }
+
+ .navigation-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+ }
+
+ .capitalize {
+
+  text-transform: capitalize;
+ }
+
+ #btnrefresh{
+
+  width: 190px;
+  height: 30px;
+  background-color: antiquewhite;
+  color: #000;
+ }
+
+
+#captcha-div{
+
+  background-color: #d43f8d;
+  color: cornsilk;
+  height: 30px;
+  width: 80px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+a{
+ text-decoration: none;
+}
+.fa{
+  position: relative;
+  top: -25px;
+  right: 50px;
+}
+#forgotanchor{
+  position: relative;
+  top: -42px;
+}
+#alert {
+  
+  padding: 4px;
+  color: red;
+  text-align: left;
+  }
+
+  #error{
+  
+    padding: 4px;
+    color: red;
+    text-align: left;
+    }
+    #usererror{
+  
+      padding: 4px;
+      color: red;
+      text-align: left;
+      }
+
+      #errormessage{
+  
+        padding: 4px;
+        color: red;
+        text-align: left;
+        }
+        #error1{
+  
+          padding: 4px;
+          color: red;
+          text-align: left;
+          }
+
+    .field.success input.errorb{
+      border-color:#2ecc71;
+    }
+    .field.error input.errorb{
+      border-color:#e74c3c;
+    }
+    .field i{
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    visibility: hidden;
+   }
+
+   .field small{
+    color:#e74c3c;
+    visibility: hidden;
+    position: absolute;
+    top: 47px;
+  
+   }
+   .field.error small{
+    visibility: visible;
+
+   }
+
+   .field.success i.fa-check-circle{
+      color:#2ecc71 ;
+      visibility:visible ;
+   }
+   .field.error i.fa-exclamation-circle{
+    color:#e74c3c;
+    visibility:visible ;
+ }
+
+ .field button.prevv{
+ height: 35px;
+ width: 60px;
+ margin-right: 200px;
+ background: #d33f8d;
+ color: #fff;
+  cursor: pointer;
+  border: none;  
+  border-radius: 5px;
+ }
+ 
+ .field button.nextt{
+  height: 35px;
+  width: 60px;
+  background: #d33f8d;
+  color: #fff;
+  cursor: pointer;
+  border: none;  
+  border-radius: 5px;
+ }
+ .pag .field {
+  width: 330px;
+  height: 45px;
+  margin: 31px 0;
+  display: flex;
+  position: relative;
+  margin-bottom: 47px;
+ }
+  .pag .field .label {
+  position: absolute;
+  top: -30px;
+  font-weight: 500;}
+ .pag .field input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 15px;
+}
